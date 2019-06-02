@@ -62,12 +62,20 @@ class RandomWalk:
             
             self.__nextwalk__()
             
-    def show_walk(self):
+    def plot_points(self):
         """Plot the points"""
         points_number = list(range(self.num_points))
         plt.figure(figsize=(10, 6), dpi=128)
-        plt.title('Random Walk', fontsize=30)
-        plt.scatter(self.x_values, self.y_values, s=1, c=points_number, edgecolor='none', cmap=plt.cm.Blues)
+        plt.title('Random Walk (Points)', fontsize=30)
+        plt.scatter(self.x_values, self.y_values, s=10, c=points_number, edgecolor='none', cmap=plt.cm.Blues)
         self.__plot_first_and_last_point__()
         self.__removeaxes__()
+        plt.show()
+        
+    def plot_line(self):
+        """Uses the plt.plot function"""
+        plt.figure(figsize=(10, 6), dpi=128)
+        plt.title('Random Walk (Line)', fontsize=30)
+        plt.plot(self.x_values, self.y_values, linewidth=0.5, c=(1, 0.5, 0.5))
+        self.__plot_first_and_last_point__()
         plt.show()
