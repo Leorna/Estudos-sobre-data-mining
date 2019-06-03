@@ -16,13 +16,13 @@ class RandomWalk:
     def __definex__(self):
         """Defines the direction and the distance of the step in the x axe"""
         x_direction = choice([1, -1])
-        x_distance = choice([0, 1, 2, 3, 4])
+        x_distance = choice([i for i in range(0, 101)])
         self.x_step = x_direction * x_distance
         
     def __definey__(self):
         """Defines the direction and the distance of the step in the y axe"""
         y_direction = choice([1, -1])
-        y_distance = choice([0, 1, 2, 3, 4])
+        y_distance = choice([i for i in range(0, 101)])
         self.y_step = y_direction * y_distance
         
     def __nextwalk__(self):
