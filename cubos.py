@@ -20,7 +20,7 @@ x_1 = x_values[-1]
 y_0 = 0
 y_1 = y_values[-1]
 
-#the xi xf and yi yf of the points in x axis and y axis
+#the xi xf and yi yf of the points in x axes and y axes
 plt.axis([x_0, x_1, y_0, y_1])
 
 #shows the graphic
